@@ -60,12 +60,12 @@ body {
 }
 
 .menu .title {
-   font-size: 3.2rem;
+   font-size: 2.8rem;
    font-weight: bold;
 }
 
 .menu .section-title {
-   font-size: 2.8rem;
+   font-size: 2.4rem;
    font-weight: bold;
    color: white;
 }
@@ -80,24 +80,34 @@ body {
 
 .nav {
    grid-area: nav;
-   padding-left: 30px;
-   padding-right: 30px;
-   padding-top: 20px;
+   padding: 10px 50px 20px;
+
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-areas:
+      "search user"
+      "greeting function";
+      
+   gap: 20px;
 }
 
 .black-icon {
    width: 2.8rem;
 }
 
-.nav-left {
+/* .nav-left {
    height: 100%;
 
    display: grid;
    grid-template-columns: 1fr;
    gap: 20px;
-}
+
+   flex: 1;
+} */
 
 .search {
+   grid-area:search;
+
    display: flex;
    align-items: center;
    gap: 10px;
@@ -115,6 +125,8 @@ body {
 }
 
 .greet-user {
+   grid-area: greeting;
+
    display: grid;
    grid-template: 1fr 1fr / 90px 1fr;
    grid-template-areas:
@@ -145,8 +157,50 @@ body {
    grid-area: name;
    align-self: start;
 
+   font-size: 2.4rem;
+   font-weight: bold;
+}
+
+.user {
+   grid-area: user;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+}
+
+.user .small-pic img {
+   width: 48px;
+}
+
+.user .name {
    font-size: 2rem;
    font-weight: bold;
+}
+
+.user-function {
+   grid-area:function;
+
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 20px;
+}
+
+.user-function button {
+   background-color: var(--sidebar-bgc);
+   color: white;
+   font-size: 1.6rem;
+   font-weight: 500;
+
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   width: 100px;
+
+   border-style: none;
+   border-radius: 1.8rem;
+   /* flex:1; */
 }
 
 .article {
