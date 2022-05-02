@@ -87,7 +87,7 @@ body {
    grid-template-areas:
       "search user"
       "greeting function";
-      
+
    gap: 20px;
 }
 
@@ -106,7 +106,7 @@ body {
 } */
 
 .search {
-   grid-area:search;
+   grid-area: search;
 
    display: flex;
    align-items: center;
@@ -180,7 +180,7 @@ body {
 }
 
 .user-function {
-   grid-area:function;
+   grid-area: function;
 
    display: flex;
    justify-content: space-around;
@@ -206,4 +206,73 @@ body {
 .article {
    background-color: var(--article-bgc);
    grid-area: article;
+
+   display: grid;
+   grid-template-columns: 1fr 300px;
+   padding-top: 30px;
+   padding-left: 16px;
+   padding-right: 16px;
+}
+
+.article h1 {
+   font-size: 2rem;
+   font-weight: 500;
+   margin-bottom: 10px;
+}
+
+.article h3 {
+   font-size: 1.4rem;
+   font-weight: bold;
+   margin-bottom: 0px;
+}
+
+.article h4 {
+   font-size: 1.4rem;
+   /* font-weight: bold; */
+   margin-bottom: 0px;
+}
+
+.article p {
+   color: gray;
+}
+
+.anns,
+.trending {
+   background-color: white;
+   padding: 20px 30px;
+   border-radius: 8px;
+   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
+   margin-bottom: 30px;
+}
+
+.anns p {
+   font-size: 1.4rem;
+   margin-top: 2px;
+}
+
+.anns hr {
+   border: 0;
+   height: 2px;
+   background-color: var(--article-bgc);
+
+}
+
+.trending img {
+   width: 48px;
+   float: left;
+   padding-right: 16px;
+   /* padding-bottom: 10px; */
+}
+
+.trending p {
+   font-size: 1.3rem;
+   margin-top: 2px;
+}
+
+.trending-item {
+   padding-bottom: 10px;
+}
+
+.projects {
+   background-color: aqua;
 }
